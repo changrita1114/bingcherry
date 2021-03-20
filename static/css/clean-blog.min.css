@@ -109,6 +109,26 @@ img::-moz-selection {
     text-transform: uppercase
 }
 
+/* Custom style*/
+
+.mx-auto {
+    margin-bottom: auto !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.team-member {
+    margin-bottom: 3rem;
+}
+
+.team-member img {
+    width: 10rem;
+    height: 10rem;
+    border: 0.5rem solid rgba(0, 0, 0, 0.1);
+}
+
 @media only screen and (min-width:992px) {
     #mainNav {
         border-bottom: 1px solid transparent;
