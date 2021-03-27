@@ -38,12 +38,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Archive</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="archive2021.html">2021 Articles</a>
+            </div>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="people.html">People</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
@@ -71,7 +75,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Want to get in touch? Please send an email to icebreakerservices@gmail.com</p>
+        <p>Please send an email to icebreakerservices@gmail.com or fill out the form!</p>
         <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
         <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
         <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
@@ -112,12 +116,51 @@
           <div id="success"></div>
           <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
         </form> -->
+        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <p class="hidden">
+                <label>Do not fill this out if you’re human</label>
+                <input name="bot-field" class="form-control" placeholder="Do not fill this out if you’re human" />
+              </p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <p>
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Name" id="name" required
+                  data-validation-required-message="Please enter your name.">
+              </p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <p>
+                <label>Email</label>
+                <input type="text" name="email" type="email" class="form-control" placeholder="Email" id="email"
+                  required data-validation-required-message="Please enter your email address." />
+              </p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <p>
+                <label>Message</label>
+                <textarea name="message" rows="5" class="form-control" placeholder="Message" id="message" required
+                  data-validation-required-message="Please enter a message."></textarea>
+              </p>
+            </div>
+          </div>
+          <div id="success"></div>
+          <p>
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+          </p>
+        </form>
       </div>
     </div>
   </div>
-
   <hr>
-
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -130,13 +173,13 @@
       </div>
     </div>
   </footer>
-
+  
   <!-- Bootstrap core JavaScript -->
   <script src="static/vendor/jquery/jquery.min.js"></script>
   <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Contact Form JavaScript -->
-  <script src="static/js/jqBootstrapValidation.js"></script>
-  <script src="static/js/contact_me.js"></script>
+  <!-- <script src="static/js/jqBootstrapValidation.js"></script> -->
+  <!-- <script src="static/js/contact_me.js"></script> -->
   <!-- Custom scripts for this template -->
   <script src="static/js/clean-blog.min.js"></script>
 
